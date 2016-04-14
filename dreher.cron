@@ -1,1 +1,4 @@
-33 4,16 * * * * /home/pi/PhotoTweet.sh
+#!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+33 0,4,8,12,16,20 * * * bash /home/pi/PhotoTweet.sh > /home/pi/cronoutput
+
