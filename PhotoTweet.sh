@@ -1,4 +1,4 @@
-#! /bin/env bash
+#!/bin/bash
 # needs fswebcam, a webcam, t and their dependencies
 NAME=$(date +%c | sed s/\ /_/g | sed s/\:/-/g)
 
