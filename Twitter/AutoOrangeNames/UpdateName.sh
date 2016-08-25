@@ -1,2 +1,2 @@
 #!/bin/bash
-t set name "$(cat /home/pi/orangenames.txt | shuf | head -1)"
+t set name "$(cat /home/chip/Scripts/AutoOrangeNames/orangenames.txt | shuf | head -1)"

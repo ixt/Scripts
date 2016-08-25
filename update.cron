@@ -1,4 +1,4 @@
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-33 00,04,08,12,16,20 * * * bash /home/pi/PhotoTweet.sh > /home/pi/cronoutput
-00 00 * * * bash /home/pi/UpdateName.sh > /home/pi/cronoutput
+33 00,04,08,12,16,20 * * * bash /home/chip/Scripts/Twitter/AutoCupTweet/PhotoTweet.sh > /home/chip/Scripts/cronoutput
+00 00 * * * bash /home/chip/Scripts/Twitter/AutoOrangeNames/UpdateName.sh > /home/chip/Scripts/cronoutput
 
