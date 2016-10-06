@@ -1,6 +1,7 @@
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 33 00,04,08,12,16,20 * * * bash /home/chip/Scripts/Twitter/AutoCupTweet/PhotoTweet.sh > /home/chip/Scripts/cronoutput
-00 00 * * * bash /home/chip/Scripts/Twitter/AutoOrangeNames/UpdateName.sh > /home/chip/Scripts/cronoutput
+00 */4 * * * bash /home/chip/Scripts/Twitter/AutoOrangeNames/UpdateName.sh > /home/chip/Scripts/cronoutput
 00 00 * * * i2cset -f -y 0 0x34 0x93 0x00
+00 00 * * * axp209 --no-limit
 00 12 * * * rm /home/chip/Scripts/cronoutput
 
