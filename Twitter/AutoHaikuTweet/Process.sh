@@ -2,10 +2,9 @@
 
 # Gets a random english wikipedia article and cuts it up as a haiku for tweeting
 
-HOMEDIR=''
-HAIKULOC="/home/orange/Projects/605204/Haiku.py"
+HAIKULOC="/home/chip/605204/Haiku.py"
 SOURCE='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&redirects=1&generator=random'
-OUTPUTS="/home/orange/Projects/Scripts/Twitter/AutoHaikuTweet/outputs"
+OUTPUTS="/home/chip/Scripts/Twitter/AutoHaikuTweet/outputs"
 AHAIKU=1
 
 while [ $AHAIKU -eq 1 ]; do
@@ -29,7 +28,7 @@ while [ $AHAIKU -eq 1 ]; do
 done;
 echo $TITLE > .title
 cat .title $OUTPUTS/lasttweet.txt .url > .temphere
-cat .temphere 
+cat .temphere
 cat .temphere > "$OUTPUTS/$TITLE.txt"
 t update "$(cat .temphere)"
 rm .tempin .tempout .tempsite .temphere .tempwhile .title .url
