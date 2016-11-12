@@ -2,9 +2,10 @@
 # Desktop is useless lets use it for "temporary" files
 
 PHOTOBACKUPLOCATION=/home/orange/Desktop/photos/dreher/jpgs/
+PLACETOTAKEFROM=$RPIE
 
 # this is the command I use as I use a GPG key as my SSH sometimes (you may want to comment it out)
-gpg-agent --enable-ssh-support --daemon scp $CHIP:photos/dreher/* $PHOTOBACKUPLOCATION
+gpg-agent --enable-ssh-support --daemon scp $PLACETOTAKEFROM:photos/dreher/* $PHOTOBACKUPLOCATION
 # Uncomment this to use real scp
 # scp $chip:photos/dreher/* $photobackuplocation
 
@@ -17,5 +18,5 @@ if [ -n $END ]; then
 fi
 
 # same with the lines below, comment out gpg-agent, uncomment ssh
-gpg-agent --enable-ssh-support --daemon ssh $CHIP 'rm photos/dreher/*.jpg'
-# ssh $CHIP 'rm photos/dreher/*.jpg'
+gpg-agent --enable-ssh-support --daemon ssh $PLACETOTAKEFROM 'rm photos/dreher/*.jpg'
+#ssh $PLACETOTAKEFROM 'rm photos/dreher/*.jpg'
