@@ -29,6 +29,7 @@ while [ $AHAIKU -eq 1 ]; do
 done;
 cat .title $OUTPUTS/lasttweet.txt .url > .temphere
 cat .temphere
+echo "#6t" >> .temphere
 cat .temphere > "$OUTPUTS/$TITLE.txt"
 t update "$(cat .temphere)"
 rm .tempin .tempout .tempsite .temphere .tempwhile .title .url
