@@ -1,13 +1,11 @@
 #!/bin/bash
 # Desktop is useless lets use it for "temporary" files
 
-PHOTOBACKUPLOCATION=/home/orange/Desktop/photos/dreher/jpgs/
+PHOTOBACKUPLOCATION=~/Desktop/photos/dreher/jpgs/
 PLACETOTAKEFROM=$RPIE
 
-# this is the command I use as I use a GPG key as my SSH sometimes (you may want to comment it out)
-gpg-agent --enable-ssh-support --daemon scp $PLACETOTAKEFROM:photos/dreher/* $PHOTOBACKUPLOCATION
-# Uncomment this to use real scp
-# scp $chip:photos/dreher/* $photobackuplocation
+mkdir $PHOTOBACKUPLOCATION -p
+scp $PLACETOTAKEFROM:photos/dreher/* $PHOTOBACKUPLOCATION 
 
 BEGINNING=$(ls $PHOTOBACKUPLOCATION -1 | tail -1 | sed -e 's/.jpg//g')
 END=$(ls $PHOTOBACKUPLOCATION -1 | head -1 | sed -e 's/.jpg//g')
@@ -18,5 +16,4 @@ if [ -n $END ]; then
 fi
 
 # same with the lines below, comment out gpg-agent, uncomment ssh
-gpg-agent --enable-ssh-support --daemon ssh $PLACETOTAKEFROM 'rm photos/dreher/*.jpg'
-#ssh $PLACETOTAKEFROM 'rm photos/dreher/*.jpg'
+ssh $PLACETOTAKEFROM 'rm photos/dreher/*.jpg'
