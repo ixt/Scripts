@@ -2,7 +2,7 @@
 
 # Gets a random english wikipedia article and cuts it up as a haiku for tweeting
 
-HOMEDIR="/home/pi"
+HOMEDIR="/home/orange/Projects"
 HAIKULOC=$(echo "$HOMEDIR""/605204/Haiku.py")
 OUTPUTS=$(echo "$HOMEDIR""/Scripts/Twitter/AutoHaikuTweet/outputs")
 SOURCE='https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&redirects=1&generator=random'
