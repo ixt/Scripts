@@ -5,6 +5,8 @@
 585-620nm
 E102
 E110
+POTUS
+Trump
 actual cup
 adventure
 agent orange
@@ -19,6 +21,7 @@ astronaut
 autumn
 b&q
 bengal tiger
+biscuit
 bittersweet
 black box
 brass
@@ -35,10 +38,14 @@ cali poppies
 canary bird
 carotenes
 carrot
+chicken of the wood
+chocolate orange
 cinnabar
 citrus red 2
+clockwork orange
 colour of magic
 concrete science
+convict
 copper
 coral
 crocoite
@@ -73,6 +80,7 @@ iobelia
 koi
 kumquat
 lifebuoy
+lifegaurd
 like red
 like yellow
 like yellow red
@@ -99,6 +107,7 @@ orange flamingo
 orange hawkweed
 orange peel
 orange rose
+orangutan
 orpiment
 papaya
 papaya whip
