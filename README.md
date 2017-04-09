@@ -8,3 +8,4 @@
 ## Backups
 - NoFacesForNames
 - Dreher Cup Tweet
+- Gitolite Force Mirror Push for all Repos
