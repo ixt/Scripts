@@ -2,6 +2,7 @@
 
 ## Twitter   
 - Automatic Cup Tweet  
+- Internet Is Real Life Auto Tweet
 - Automatic Name Changer  
 - Automatic posting of 60//5\204 
 
