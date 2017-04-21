@@ -10,3 +10,6 @@
 - NoFacesForNames
 - Dreher Cup Tweet
 - Gitolite Force Mirror Push for all Repos
+
+## Services
+- Pi Ad-Hoc Networking 
