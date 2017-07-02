@@ -1,0 +1,15 @@
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+00 00 * * * t set name ornge
+00 01,13 * * * t set name orange
+00 02,14 * * * t set name oraange
+00 03,15 * * * t set name oraaange
+00 04,16 * * * t set name oraaaange
+00 05,17 * * * t set name oraaaaange
+00 06,18 * * * t set name oraaaaaange
+00 07,19 * * * t set name oraaaaaaange
+00 08,20 * * * t set name oraaaaaaaange
+00 09,21 * * * t set name oraaaaaaaaange
+00 10,22 * * * t set name oraaaaaaaaaange
+00 11,23 * * * t set name oraaaaaaaaaaange
+00 12 * * * t set name oraaaaaaaaaaaange
+
