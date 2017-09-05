@@ -9,8 +9,11 @@ After=sys-subsystem-net-devices-wlan0.device
 Type=oneshot
 RemainAfterExit=yes
 
+ExecStart=-/usr/bin/pkill wpa_supplicant
+ExecStart=-/bin/ip addr flush dev wlan0
+ExecStart=-/bin/ip link set wlan0 down
 ExecStart=/bin/ip link set wlan0 up
-ExecStart=/sbin/iw wlan0 set type ibss
+ExecStart=/sbin/iw dev wlan0 set type ibss
 ExecStart=/sbin/iw wlan0 ibss join "PiZeroMesh" 2432
 ExecStart=/bin/ip addr add 10.0.0.x/255.255.255.0 dev wlan0
 
