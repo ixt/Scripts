@@ -1,0 +1,10 @@
+#!/bin/bash
+# This script was used for getting a accurate number of bytes in size of all the videos
+# totalling around 1.6TB when this was last done (2017/09/09)
+runningTotal=0
+while read entry; do
+	value=$(echo $entry | sed -e "s/Content-Length: //g" -e "s///g")
+	newTotal=$(echo $value + $runningTotal |  bc -l)
+	(( runningTotal = newTotal ))
+	echo $runningTotal
+done < .newsize

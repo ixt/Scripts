@@ -1,0 +1,6 @@
+#!/bin/bash
+# Simple script that just downloads a single random file listed in flvlist.
+for i in $(shuf flvlist | head -1); do 
+    filename=$(echo $i | sed -e "s@.*/@@g" -e "s/\.flv//g")
+    screen -dm ../youtube-dl $i -o $filename.flv
+done

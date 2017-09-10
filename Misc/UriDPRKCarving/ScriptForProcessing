@@ -1,0 +1,16 @@
+#!/bin/bash
+# This is a cleaner and production script for converting flv files into nicer mp4s
+# After it triggers it will relaunch the downloader adding another file to the downloading
+actualDIR=$(dirname $0)
+cd $actualDIR
+while true; do 
+    if ls *.flv; then 
+        file=$(ls *.flv | head -1 | sed -e "s/\.flv//g")
+        ../ffmpeg-3.3-64bit-static/ffmpeg -i $file.flv -vcodec libx264 -acodec aac $file.mp4
+        rm $file.flv
+        mv $file.mp4 done/
+        sed -i '/${file}/d' flvlist 
+        bash ./newItem
+    fi
+    sleep 10s
+done

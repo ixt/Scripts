@@ -1,0 +1,8 @@
+#!/bin/bash
+# This script downloads every page then greps for embeded video
+i=$(ls -1 | tail -2 | head -1 | sed -e "s/\.txt//g")
+while [ $i -lt 36013 ]; do
+    $(curl "http://uriminzokkiri.com/index.php?ptype=centertv&no=${i}" -m 10 | grep 61.161 >> $i.txt) &
+    (( i += 1 ))
+    wait
+done

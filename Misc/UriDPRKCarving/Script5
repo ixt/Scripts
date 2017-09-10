@@ -1,0 +1,4 @@
+#!/bin/bash
+# This was a test for auto encoding the videos after downloading to save some space
+# This attempt wasnt pretty and didnt work
+for i in $(head flvlist); do screen -dm '../youtube-dl $i; ../ffmpeg-3.3-64bit-static/ffmpeg -i $(echo $i | sed -e "s@.*/@@g") -vcodec libx264 -acodec aac $(echo $i | sed -e "s@.*/@@g" -e "s/\.flv//g").MP4; rm $(cat $i | sed -e "s@.*/@@g"); exit'; done

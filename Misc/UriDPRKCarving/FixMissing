@@ -1,0 +1,14 @@
+#!/bin/bash
+# Scans for downloads that timed out and therefore leaves a .part file
+# This is then used to grep for a full URL and restart the download.
+# This should be ran as a cronjob but i do it manually as its really a workaround anyway
+echo "" > .missingurls
+for item in $(ls -1 *.flv.part | sed -e 's/.part//g'); do
+	grep $item definitiveList >> .missingurls
+	grep $item definitiveList
+	echo $item
+done
+for i in $(cat .missingurls); do 
+	filename=$(echo $i | sed -e "s@.*/@@g" -e "s/\.flv//g"); 
+	screen -dm ../youtube-dl $i -o $filename.flv; 
+done

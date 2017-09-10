@@ -1,0 +1,6 @@
+#!/bin/bash
+# This was just a means to an end using Script2
+while read i; do
+    $(curl "http://uriminzokkiri.com/index.php?ptype=centertv&no=${i}" -m 10 | grep 61.161 >> $i.txt) &
+done < .newlist
+
