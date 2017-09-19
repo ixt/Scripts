@@ -1,4 +1,0 @@
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-33 00,04,08,12,16,20 * * * bash /home/orange/Projects/Scripts/Twitter/AutoCupTweet/PhotoTweet.sh > /home/orange/Projects/Scripts/cronoutput
-00 00 * * * bash /home/orange/Projects/Scripts/Twitter/AutoOrangeNames/UpdateName.sh > /home/orange/Projects/Scripts/cronoutput
-13 02,06,10,14,18,22 * * * bash /home/orange/Project/Scripts/Twitter/AutoHaikuTweet/Process.sh > /home/orange/Projects/Scripts/cronoutput
