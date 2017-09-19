@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Beat Time
+After=syslog.target
+
+[Service]
+Type=simple
+User=orange
+WorkingDirectory=/home/orange/Projects/Scripts/Twitter/ClockFace/
+ExecStart=/home/orange/Projects/Scripts/Twitter/ClockFace/Cycle.sh
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
