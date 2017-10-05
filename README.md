@@ -14,13 +14,14 @@
 
 ## Twitter   
 - Automatic Cup Tweet  
-- Automatic posting of 60//5\204 
 - Automatic Name Changer  
+- Automatic posting of 60//5\204 
 - Change Display picture to current time 
 - Change name to reflect current time 
+- HowMuchOfABotAmI in a tweet
+- IAAIAAIAO test script 
 - Internet Is Real Life Auto Tweet
 - Tweet chain automation
-- IAAIAAIAO test script 
 
 ## Services
 - Pi Ad-Hoc Networking 
