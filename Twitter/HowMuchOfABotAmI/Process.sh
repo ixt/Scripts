@@ -9,7 +9,7 @@ TEMP=$(mktemp)
 
 # Get Current Profiles keys and info
 consumer_key=$(head -5 ~/.trc | tail -1 | sed -e "s/-//g" -e "s/[[:space:]]//g")
-tail +$(sed -n "/$consumer_key/=" ~/.trc | head -2 | tail -1) ~/.trc | head -6 > $TEMP
+tail -n+$(sed -n "/$consumer_key/=" ~/.trc | head -2 | tail -1) ~/.trc | head -6 > $TEMP
 
 consumer_secret=$(grep "consumer_secret" $TEMP | cut -d: -f2 | xargs echo)
 access_token=$(grep "token" $TEMP | cut -d: -f2 | xargs echo)
