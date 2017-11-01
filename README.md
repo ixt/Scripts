@@ -8,9 +8,12 @@
 ## Misc
 - TimeInBeats 
 - Throw away scripts to download all videos from uriminzokkiri.com
+- Average Weather tweet
+- Bash notes
 
 ## Slice and Dice
 - Cut 4 random frames from any video & and a posting to twitter script
+- Download all the trending videos
 
 ## Twitter   
 - Automatic Cup Tweet  
@@ -22,6 +25,8 @@
 - IAAIAAIAO test script 
 - Internet Is Real Life Auto Tweet
 - Tweet chain automation
+- How many scripts
 
 ## Services
 - Pi Ad-Hoc Networking 
+- Swatch Beat Time counter

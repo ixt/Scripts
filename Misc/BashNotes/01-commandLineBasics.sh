@@ -158,7 +158,7 @@ du ~/Documents
 ls -lh 
 lsblk 
 
-FS=" " read -a cuts < <(ps -a | tail -1 | xargs echo)
+IFS=" " read -a cuts < <(ps -a | tail -1 | xargs echo)
 for cut in ${cuts[@]}; do
     echo $cut
 done
@@ -168,3 +168,4 @@ done
 # screen        - terminal multiplexer (multiple screens in a screen)
 # screenfetch   - status / specifications 
 # jq            - JSON processing 
+# tree          - Gives a structure of a directory & its contents
