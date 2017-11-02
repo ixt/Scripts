@@ -17,8 +17,8 @@ for i in `seq $START $END`; do
     for block in `seq 1 $(( COLUMNS - BLOCKS ))`; do
         STRING="${STRING} "
     done
-    echo -ne "\b$BLANK" 
-    echo -e "\r$PERCENT%"
-    echo -ne "\b$STRING ]$PERCENT% ]\r" 
+    echo -ne "\b$BLANK\r" >&2 
+    echo -e "$PERCENT%"
+    echo -ne "\b$STRING ]$PERCENT% ]\r" >&2
 done
 echo ""
