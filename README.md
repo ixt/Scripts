@@ -10,6 +10,7 @@
 - Throw away scripts to download all videos from uriminzokkiri.com
 - Average Weather tweet
 - Bash notes
+- Adjust a crontab to run a script at the sun cycle significant points for a given long&lat
 
 ## Slice and Dice
 - Cut 4 random frames from any video & and a posting to twitter script
