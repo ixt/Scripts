@@ -14,6 +14,7 @@
 ## Slice and Dice
 - Cut 4 random frames from any video & and a posting to twitter script
 - Download all the trending videos
+- YouTube Music Detector 
 
 ## Twitter   
 - Automatic Cup Tweet  
