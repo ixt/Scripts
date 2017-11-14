@@ -7,7 +7,7 @@ if [ ! -e latlng ]; then
 fi
 
 # Weather API used is DARKSKYAPI
-DARKSKYAPIKEY=""
+DARKSKYAPIKEY="b260f0ba6f6f3c18fe1e526ce242f703"
 
 ## Get newest data on all countries via Dark Sky
 rm currently/*

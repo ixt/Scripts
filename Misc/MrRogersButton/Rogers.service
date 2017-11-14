@@ -1,0 +1,21 @@
+[Unit]
+Description=Mr Rogers Button
+After=syslog.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/media/pi/C0F5-D721/MrRogers/
+ExecStartPre=/bin/echo "23" > /sys/class/gpio/export
+ExecStartPre=/bin/echo "25" > /sys/class/gpio/export
+ExecStartPre=/bin/echo "in" > /sys/class/gpio/gpio23/direction
+ExecStartPre=/bin/echo "out" > /sys/class/gpio/gpio25/direction
+ExecStart=/bin/bash /media/pi/C0F5-D721/MrRogers/Button.sh
+ExecStop=/bin/echo "0" > /sys/class/gpio/gpio25/value
+ExecStop=/bin/echo "23" > /sys/class/gpio/unexport
+ExecStop=/bin/echo "25" > /sys/class/gpio/unexport
+stdout=syslog
+stderr=syslog
+
+[Install]
+WantedBy=multi-user.target

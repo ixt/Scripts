@@ -11,6 +11,7 @@
 - Average Weather tweet
 - Bash notes
 - Adjust a crontab to run a script at the sun cycle significant points for a given long&lat
+- Mr Rogers Button Service and Button.sh
 
 ## Slice and Dice
 - Cut 4 random frames from any video & and a posting to twitter script

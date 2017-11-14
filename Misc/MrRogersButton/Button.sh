@@ -1,0 +1,21 @@
+#!/bin/bash
+play() {
+	VAL=$(ls -1 *.mkv | shuf | head -1)
+	screen -dm mpv $VAL --no-video
+	echo "Playing $VAL"
+}
+
+echo 0 > /sys/class/gpio/gpio25/value 
+while true; do
+	if [ "$(cat /sys/class/gpio/gpio23/value)" -eq "0" ]; then 
+		echo 1 > /sys/class/gpio/gpio25/value
+		play 
+		sleep 1s
+		while wait; do
+			[ "$(cat /sys/class/gpio/gpio23/value)" -eq "0" ] && pkill mpv && break
+			sleep 0.1s
+		done
+		echo 0 > /sys/class/gpio/gpio25/value 
+	fi 
+	sleep 0.1s
+done
