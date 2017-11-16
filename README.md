@@ -17,6 +17,7 @@
 - Cut 4 random frames from any video & and a posting to twitter script
 - Download all the trending videos
 - YouTube Music Detector 
+- Wikipedia Date Carving
 
 ## Twitter   
 - Automatic Cup Tweet  
