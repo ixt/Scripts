@@ -1,2 +1,11 @@
 #!/bin/bash
-cat test.txt | egrep -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" | sed "/^100\./d" | sort | uniq -c 
+
+coproc TCPDUMP { \
+    sudo tcpdump -s 0 -v \
+}
+
+while read line; do
+    egrep -o "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+    echo "$ip"
+done < sudo tcpdump -s 0 -v
+
